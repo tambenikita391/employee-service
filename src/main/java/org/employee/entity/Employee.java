@@ -37,70 +37,82 @@ public class Employee {
 	private String age;
 	
 	@Column
-	private String eMail;
+	private String email;
+	
+	public static Employee getInstance() {
+		return new Employee();
+	}
 
 	public int getEmpId() {
 		return empId;
 	}
 
-	public void setEmpId(int empId) {
+	public Employee setEmpId(int empId) {
 		this.empId = empId;
+		return this;
 	}
 
 	public String getFullName() {
 		return fullName;
 	}
 
-	public void setFullName(String fullName) {
+	public Employee setFullName(String fullName) {
 		this.fullName = fullName;
+		return this;
 	}
 
 	public String getGender() {
 		return gender;
 	}
 
-	public void setGender(String gender) {
+	public Employee setGender(String gender) {
 		this.gender = gender;
+		return this;
 	}
 
 	public String getSalary() {
 		return salary;
 	}
 
-	public void setSalary(String salary) {
+	public Employee setSalary(String salary) {
 		this.salary = salary;
+		return this;
 	}
 
 	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(String phone) {
+	public Employee setPhone(String phone) {
 		this.phone = phone;
+		return this;
 	}
 
 	public String getPosition() {
 		return position;
 	}
 
-	public void setPosition(String position) {
+	public Employee setPosition(String position) {
 		this.position = position;
+		return this;
 	}
 
 	public String getAge() {
 		return age;
 	}
 
-	public void setAge(String age) {
+	public Employee setAge(String age) {
 		this.age = age;
+		return this;
 	}
 
 	public String geteMail() {
-		return eMail;
+		return email;
 	}
 
-	public void seteMail(String eMail) {
-		this.eMail = eMail;
+	public Employee seteMail(String eMail) {
+		this.email = eMail;
+		return this;
 	}
 	
 	

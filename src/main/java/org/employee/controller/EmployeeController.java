@@ -5,7 +5,7 @@ import java.util.List;
 import org.employee.dto.EmployeeRequest;
 import org.employee.dto.EmployeeResponse;
 import org.employee.entity.Employee;
-import org.employee.service.EmployeeService;
+import org.employee.service.EmployeeServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -23,7 +23,7 @@ import jakarta.validation.Valid;
 public class EmployeeController {
 
 	@Autowired
-	EmployeeService service;
+	EmployeeServiceImpl service;
 
 	@PostMapping("/add/employee")
 	public EmployeeResponse addEmployee(@Valid @RequestBody EmployeeRequest request) {
@@ -32,12 +32,12 @@ public class EmployeeController {
 
 	@PutMapping("/update/employee")
 	public Employee update(@RequestBody Employee employee) {
-		return service.updateDetails(employee);
+		return service.updateEmployeeDetails(employee);
 	}
 
-	@GetMapping("/search/employee/{empId}")
-	public EmployeeResponse searchEmployee(@PathVariable int empId) {
-		return service.searchEmployee(empId);
+	@GetMapping("/search/employee/{email}")
+	public EmployeeResponse searchEmployee(@PathVariable String email) {
+		return service.searchEmployee(email);
 	}
 
 	@GetMapping("/search/all/employee")
