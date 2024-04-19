@@ -1,120 +1,106 @@
 package org.employee.entity;
 
-import org.springframework.stereotype.Component;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import org.springframework.stereotype.Component;
 
 @Table
 @Entity
 @Component
 public class Employee {
-	
-	@Column
-	@GeneratedValue
-	@Id
-	private int empId;
-	
-	@Column
-	private String fullName;
-	
-	@Column
-	private String position;
-	
-	@Column
-	private String gender;
-	
-	@Column
-	private String salary;
-	
-	@Column
-	private String phone;
-	
-	@Column
-	private String age;
-	
-	@Column
-	private String email;
-	
-	public static Employee getInstance() {
-		return new Employee();
-	}
 
-	public int getEmpId() {
-		return empId;
-	}
+  @Column @GeneratedValue @Id private int empId;
 
-	public Employee setEmpId(int empId) {
-		this.empId = empId;
-		return this;
-	}
+  @Column private String fullName;
 
-	public String getFullName() {
-		return fullName;
-	}
+  @Column private String position;
 
-	public Employee setFullName(String fullName) {
-		this.fullName = fullName;
-		return this;
-	}
+  @Column private String gender;
 
-	public String getGender() {
-		return gender;
-	}
+  @Column private String salary;
 
-	public Employee setGender(String gender) {
-		this.gender = gender;
-		return this;
-	}
+  @Column private String phone;
 
-	public String getSalary() {
-		return salary;
-	}
+  @Column private String age;
 
-	public Employee setSalary(String salary) {
-		this.salary = salary;
-		return this;
-	}
+  @Column private String email;
 
-	public String getPhone() {
-		return phone;
-	}
+  public static Employee getInstance() {
+    return new Employee();
+  }
 
-	public Employee setPhone(String phone) {
-		this.phone = phone;
-		return this;
-	}
+  public int getEmpId() {
+    return empId;
+  }
 
-	public String getPosition() {
-		return position;
-	}
+  public Employee setEmpId(int empId) {
+    this.empId = empId;
+    return this;
+  }
 
-	public Employee setPosition(String position) {
-		this.position = position;
-		return this;
-	}
+  public String getFullName() {
+    return fullName;
+  }
 
-	public String getAge() {
-		return age;
-	}
+  public Employee setFullName(String fullName) {
+    this.fullName = fullName;
+    return this;
+  }
 
-	public Employee setAge(String age) {
-		this.age = age;
-		return this;
-	}
+  public String getGender() {
+    return gender;
+  }
 
-	public String geteMail() {
-		return email;
-	}
+  public Employee setGender(String gender) {
+    this.gender = gender;
+    return this;
+  }
 
-	public Employee seteMail(String eMail) {
-		this.email = eMail;
-		return this;
-	}
-	
-	
+  public String getSalary() {
+    return salary;
+  }
 
+  public Employee setSalary(String salary) {
+    this.salary = salary;
+    return this;
+  }
+
+  public String getPhone() {
+    return phone;
+  }
+
+  public Employee setPhone(String phone) {
+    this.phone = phone;
+    return this;
+  }
+
+  public String getPosition() {
+    return position;
+  }
+
+  public Employee setPosition(String position) {
+    this.position = position;
+    return this;
+  }
+
+  public String getAge() {
+    return age;
+  }
+
+  public Employee setAge(String age) {
+    this.age = age;
+    return this;
+  }
+
+  public String geteMail() {
+    return email;
+  }
+
+  public Employee seteMail(String eMail) {
+    this.email = eMail;
+    return this;
+  }
 }

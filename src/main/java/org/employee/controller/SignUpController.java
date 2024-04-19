@@ -11,12 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SignUpController {
 
-	@Autowired
-	SignUpServiceImpl service;
+  @Autowired SignUpServiceImpl service;
 
-	@PostMapping(path = "/auth/sign")
-	public SignUpResponse signUp(@RequestBody SignUpRequest request) {
-		return service.saveEmplyeesPersonalDetails(request);
-	}
-
+  @PostMapping("/auth/sign")
+  public SignUpResponse signUp(@RequestBody SignUpRequest request) {
+    return service.saveEmplyeesPersonalDetails(request);
+  }
 }

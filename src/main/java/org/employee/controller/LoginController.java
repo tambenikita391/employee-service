@@ -11,12 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LoginController {
 
-	@Autowired
-	LoginServiceImpl service;
+  @Autowired LoginServiceImpl service;
 
-	@PostMapping(path = "/auth/validate")
-	public LoginResponse validate(@RequestBody LoginRequest request) {
-		return service.validateEmployee(request);
-	}
-
+  @PostMapping(path = "/auth/validate")
+  public LoginResponse validate(@RequestBody LoginRequest request) {
+    return service.validateEmployee(request);
+  }
 }

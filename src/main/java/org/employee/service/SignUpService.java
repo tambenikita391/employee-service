@@ -4,8 +4,6 @@ import org.employee.dto.SignUpRequest;
 import org.employee.dto.SignUpResponse;
 
 public interface SignUpService {
-	
-	public SignUpResponse saveEmplyeesPersonalDetails(SignUpRequest signUpRequest);
-	
 
+  public SignUpResponse saveEmplyeesPersonalDetails(SignUpRequest signUpRequest);
 }

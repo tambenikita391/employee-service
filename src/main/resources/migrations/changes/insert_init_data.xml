@@ -1,0 +1,30 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+	<changeSet author="Nikita Tambe" id="20220716">
+		<insert schemaName="employee_service_db" tableName="employee_details">
+			<column name="id" value="1" />
+			<column name="fullName" value="Nikita S. Tambe" />
+			<column name="position" value="Java Developer" />
+			<column name="gender" value="female" />
+			<column name="salary" value="60000" />
+			<column name="phone" value="1234567892" />
+			<column name="age" value="21" />
+			<column name="email" value="nikita123@gmail.com" />
+		</insert>
+	</changeSet>
+	<changeSet author="Nikita Tambe" id="20220716-1">
+		<insert schemaName="employee_service_db" tableName="employee_details">
+			<column name="id" value="2" />
+			<column name="fullName" value="Sanika S. Patil" />
+			<column name="position" value="Java Practitioner" />
+			<column name="gender" value="female" />
+			<column name="salary" value="40000" />
+			<column name="phone" value="9321567892" />
+			<column name="age" value="20" />
+			<column name="email" value="sanika@gmail.com" />
+		</insert>
+	</changeSet>
+
+</databaseChangeLog>

@@ -1,7 +1,7 @@
 package org.employee.controller;
 
+import jakarta.validation.Valid;
 import java.util.List;
-
 import org.employee.dto.EmployeeRequest;
 import org.employee.dto.EmployeeResponse;
 import org.employee.entity.Employee;
@@ -16,38 +16,34 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import jakarta.validation.Valid;
-
 @RestController
 @CrossOrigin(origins = "*")
 public class EmployeeController {
 
-	@Autowired
-	EmployeeServiceImpl service;
+  @Autowired EmployeeServiceImpl service;
 
-	@PostMapping("/add/employee")
-	public EmployeeResponse addEmployee(@Valid @RequestBody EmployeeRequest request) {
-		return service.saveEmployeeDetails(request);
-	}
+  @PostMapping("/add/employee")
+  public EmployeeResponse addEmployee(@Valid @RequestBody EmployeeRequest request) {
+    return service.saveEmployeeDetails(request);
+  }
 
-	@PutMapping("/update/employee")
-	public Employee update(@RequestBody Employee employee) {
-		return service.updateEmployeeDetails(employee);
-	}
+  @PutMapping("/update/employee")
+  public Employee update(@RequestBody Employee employee) {
+    return service.updateEmployeeDetails(employee);
+  }
 
-	@GetMapping("/search/employee/{email}")
-	public EmployeeResponse searchEmployee(@PathVariable String email) {
-		return service.searchEmployee(email);
-	}
+  @GetMapping("/search/employee/{email}")
+  public EmployeeResponse searchEmployee(@PathVariable String email) {
+    return service.searchEmployee(email);
+  }
 
-	@GetMapping("/search/all/employee")
-	public List<Employee> getAllEmployee() {
-		return service.getAllEmployee();
-	}
+  @GetMapping("/search/all/employee")
+  public List<Employee> getAllEmployee() {
+    return service.getAllEmployee();
+  }
 
-	@DeleteMapping("/delete/employee/{empId}")
-	public String deleteEmp(@PathVariable int empId) {
-		return service.deleteEmployee(empId);
-	}
-
+  @DeleteMapping("/delete/employee/{empId}")
+  public String deleteEmp(@PathVariable int empId) {
+    return service.deleteEmployee(empId);
+  }
 }
