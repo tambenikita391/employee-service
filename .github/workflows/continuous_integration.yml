@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Code checkout
-        uses: action/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Java setup
         uses: actions/setup-java@v2
