@@ -62,5 +62,28 @@
 				</executions>
 			</plugin>
 		</plugins>
+		<plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.44.0</version>
+				<configuration>
+					<images>
+						<image>
+							<name>${project.artifactId}:${project.version}</name>
+						</image>
+					</images>
+					<build>
+						<dockerFile>
+							${project.basedir}/src/main/docker/Dockerfile</dockerFile>
+						<contextDir>${project.basedir}/src/main/docker</contextDir>
+						<tags>
+							<tag>${project.version}</tag>
+						</tags>
+					</build>
+					<push>
+						<tagLatest>true</tagLatest>
+					</push>
+				</configuration>
+			</plugin>
 	</build>
 </project>
