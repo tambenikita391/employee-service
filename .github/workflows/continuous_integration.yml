@@ -1,0 +1,21 @@
+name: CI/CD workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  pre-commit-scans:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Code checkout
+        uses: action/checkout@v3
+
+      - name: Java setup
+        uses: actions/java-setup@v2
+        with:
+          distribution: 'temurin'
+          version: '21'
+    
