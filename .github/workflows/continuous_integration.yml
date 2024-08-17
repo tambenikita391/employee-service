@@ -19,6 +19,9 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Check google formatter
+      - name: Add google formatter
         run: mvn com.spotify.fmt:fmt-maven-plugin:format
+
+      - name: Check google formatter
+        run: mvn com.spotify.fmt:fmt-maven-plugin:check
     
