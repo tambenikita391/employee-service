@@ -26,5 +26,5 @@ jobs:
         run: mvn com.spotify.fmt:fmt-maven-plugin:check
 
       - name: Build code and create docker image
-        run: docker build -t org.dnyanyog/employee-service 
+        run: docker build -t org.dnyanyog/employee-service .
     
